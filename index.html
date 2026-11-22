@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蜂窝面板 HoneyPanel · AutoCAD 2013~2027</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --card-2: #1c222b;
+    --border: #30363d;
+    --text: #e6edf3;
+    --sub: #9198a1;
+    --accent: #39c5cf;
+    --accent-2: #2a9aa3;
+    --accent-soft: rgba(57, 197, 207, .12);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 20px 80px;
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+    line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  header { padding: 56px 0 28px; text-align: center; }
+  .hex {
+    width: 54px; height: 60px; margin: 0 auto 18px; display: block;
+    filter: drop-shadow(0 0 16px rgba(57,197,207,.35));
+  }
+  h1 { font-size: 28px; margin: 0 0 10px; letter-spacing: .5px; }
+  .lead { color: var(--sub); font-size: 15px; margin: 0 auto; max-width: 620px; }
+  .badges { margin-top: 18px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 20px;
+    background: var(--accent-soft); border: 1px solid rgba(57,197,207,.3);
+    color: var(--accent); font-size: 12px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 26px 28px; margin: 16px 0;
+  }
+  .download { text-align: center; border-color: rgba(57,197,207,.35); background: linear-gradient(180deg, #182228, var(--card)); }
+  .dl-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #06252a; font-weight: 700; font-size: 16px;
+    padding: 13px 34px; border-radius: 8px; text-decoration: none;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .dl-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(57,197,207,.25); }
+  .dl-btn svg { width: 18px; height: 18px; }
+  .file-meta { margin-top: 14px; color: var(--sub); font-size: 13px; }
+  .file-meta code { color: var(--text); background: var(--card-2); padding: 2px 7px; border-radius: 4px; }
+  h2 { font-size: 17px; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  ol { margin: 0; padding-left: 22px; }
+  li { margin: 9px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--sub); font-weight: 500; width: 34%; }
+  tr:last-child td, tr:last-child th { border-bottom: none; }
+  code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .92em; }
+  kbd {
+    background: var(--card-2); border: 1px solid var(--border); border-bottom-width: 2px;
+    border-radius: 5px; padding: 2px 7px; font-family: inherit; font-size: 13px; color: var(--accent);
+  }
+  details { border-top: 1px solid var(--border); margin-top: 14px; padding-top: 12px; }
+  summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--accent); list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "▸ "; }
+  details[open] summary::before { content: "▾ "; }
+  details .inner { padding-top: 12px; font-size: 14px; color: #c9d1d9; }
+  .inner ul { margin: 6px 0 14px; padding-left: 20px; }
+  .inner strong { color: var(--text); }
+  .hash {
+    display: block; word-break: break-all; background: var(--card-2);
+    border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px;
+    font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--sub);
+  }
+  .note {
+    margin-top: 14px; padding: 10px 14px; border-left: 3px solid var(--accent-2);
+    background: var(--accent-soft); color: #b9c3cc; font-size: 13px; border-radius: 0 6px 6px 0;
+  }
+  footer { text-align: center; color: #6e7681; font-size: 12px; margin-top: 40px; }
+  @media (max-width: 600px) {
+    header { padding-top: 36px; }
+    h1 { font-size: 23px; }
+    .card { padding: 20px 18px; }
+    th { width: 40%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <svg class="hex" viewBox="0 0 60 68" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M30 2 L57 17 L57 51 L30 66 L3 51 L3 17 Z" fill="rgba(57,197,207,.10)" stroke="#39c5cf" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="30" cy="34" r="8" fill="#39c5cf"/>
+  </svg>
+  <h1>蜂窝面板 HoneyPanel</h1>
+  <p class="lead">AutoCAD 的悬浮命令面板。把常用命令摆成一片按钮，按一下就出来，点一下就执行——不用再敲命令名。</p>
+  <div class="badges">
+    <span class="badge">AutoCAD 2013 ~ 2027</span>
+    <span class="badge">单文件 · 无外部依赖</span>
+    <span class="badge">2014 / 2025 实测通过</span>
+  </div>
+</header>
+
+<div class="card download">
+  <a class="dl-btn" href="HoneyPanel.dll" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v3h16v-3"/></svg>
+    下载 HoneyPanel.dll
+  </a>
+  <div class="file-meta">920 KB &nbsp;·&nbsp; 下载后<b>不需要改名</b>，放到任意目录即可</div>
+</div>
+
+<div class="card">
+  <h2>安装</h2>
+  <ol>
+    <li>下载上面的 <code>HoneyPanel.dll</code>，放进<b>任意目录</b>（没有固定路径要求，自己能找到就行）。</li>
+    <li>在 CAD 里输入 <code>NETLOAD</code>，选中这个文件。命令行出现「蜂窝面板独立插件已加载」即成功。</li>
+    <li>按 <kbd>Ctrl</kbd> + <kbd>中键</kbd> 呼出面板。</li>
+  </ol>
+  <p class="note"><code>NETLOAD</code> 一次就写入自动加载，以后开 CAD 自动带出来。选定一个目录后别再挪动——配置文件 <code>蜂窝面板.json</code> 按 DLL 所在目录读写，换了目录等于换一套配置。</p>
+</div>
+
+<div class="card">
+  <h2>操作</h2>
+  <table>
+    <tr><th><kbd>Ctrl</kbd> + <kbd>中键</kbd></th><td>呼出面板（快捷键可在设置窗里改）</td></tr>
+    <tr><th>面板中心「设置」钮</th><td>打开设置窗，改布局、外观、呼出方式和按钮命令</td></tr>
+    <tr><th><code>HONEYUNLOAD</code></th><td>卸载：删自动加载键 + 摘钩子 + 关面板。重启 CAD 后彻底退出，重新 <code>NETLOAD</code> 即恢复</td></tr>
+  </table>
+
+  <details>
+    <summary>功能</summary>
+    <div class="inner">
+      <p><strong>布局</strong></p>
+      <ul>
+        <li>环形蜂窝：六边形绕圈排布，三形态（隐藏 / 常驻面板 / 常驻中心），隐藏时靠 Ctrl+中键呼出</li>
+        <li>网格条：横向排列，恒常驻，不占呼出快捷键</li>
+        <li>设置窗里随时切换，两种布局各自记住自己的位置和尺寸</li>
+      </ul>
+      <p><strong>外观</strong></p>
+      <ul>
+        <li>三种排版样式（环形 / 网格·六边形 / 网格·矩形）的宽度·高度·间距·线宽·字高分别保存，切换互不影响</li>
+        <li>六套配色主题（赛博朋克 / 日式清新 / 蒸汽波 / 莫兰迪 / 黑金 / 8bit），也可跟随 CAD 深浅色</li>
+        <li>矩形网格的宽度与六边形共用，只单独配高度</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>SHA-256 校验值</summary>
+    <div class="inner">
+      <span class="hash">ddf2e87acb065ec2b51115891e9053da321f17dd53ff67579671b316e0fa225d</span>
+    </div>
+  </details>
+</div>
+
+<footer>一份 DLL 覆盖 AutoCAD 2013~2027 · 32/64 位通用</footer>
+
+</div>
+</body>
+</html>
