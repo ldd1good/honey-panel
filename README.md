@@ -4,11 +4,11 @@ AutoCAD 的**悬浮命令面板**：把常用命令摆成一片按钮，Ctrl+中
 
 | 文件 | 说明 |
 |---|---|
-| `HoneyPanel.dll` | 下载后直接使用，不需要改名 |
+| [⬇ 下载 HoneyPanel.dll](https://ldd1good.github.io/honey-panel/HoneyPanel.dll) | 920 KB · 下载后直接使用，不需要改名 |
 
 ## 安装
 
-1. 下载 `HoneyPanel.dll`，放进**任意目录**（没有固定路径要求，自己能找到就行）
+1. 下载 [HoneyPanel.dll](https://ldd1good.github.io/honey-panel/HoneyPanel.dll)，放进**任意目录**（没有固定路径要求，自己能找到就行）
 2. CAD 里 `NETLOAD` 选这个文件，命令行出现「蜂窝面板独立插件已加载」
 3. 按 **Ctrl+中键** 呼出面板
 
