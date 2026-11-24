@@ -4,7 +4,7 @@ AutoCAD 的**悬浮命令面板**：把常用命令摆成一片按钮，Ctrl+中
 
 | 文件 | 说明 |
 |---|---|
-| [⬇ 下载 HoneyPanel.dll](https://ldd1good.github.io/honey-panel/HoneyPanel.dll) | 920 KB · 下载后直接使用，不需要改名 |
+| [⬇ 下载 HoneyPanel.dll](https://ldd1good.github.io/honey-panel/HoneyPanel.dll) | 903 KB · 下载后直接使用，不需要改名 |
 
 ## 安装
 
@@ -20,7 +20,8 @@ AutoCAD 的**悬浮命令面板**：把常用命令摆成一片按钮，Ctrl+中
 
 | 命令 / 操作 | 作用 |
 |---|---|
-| `HONEYUNLOAD` | 卸载：删自动加载键 + 摘钩子 + 关面板。重启 CAD 后彻底退出，重新 `NETLOAD` 即恢复 |
+| `HONEYUNLOAD` | 卸载：删自动加载键 + 写禁用标记 + 摘钩子 + 关面板。重启 CAD 后彻底退出；重新启用用 `HONEYENABLE` |
+| `HONEYENABLE` | 删除禁用标记，重新挂载呼出钩子（DLL 已在当前进程时立即生效） |
 | **Ctrl+中键** | 呼出面板（快捷键可在设置窗里改） |
 | 面板中心「设置」钮 | 打开设置窗 |
 
@@ -44,7 +45,7 @@ AutoCAD 的**悬浮命令面板**：把常用命令摆成一片按钮，Ctrl+中
 <details><summary><b>SHA-256</b></summary>
 
 ```
-HoneyPanel.dll               ddf2e87acb065ec2b51115891e9053da321f17dd53ff67579671b316e0fa225d
+HoneyPanel.dll               3c71796c82ce8625390db031b9a51569e27f806806f47a1a8574956d88142894
 ```
 
 </details>
